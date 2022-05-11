@@ -2,9 +2,6 @@ name: Create Wheel
 
 on:
   push:
-    branches:
-    - master
-    - feature/cicd
     tags:
       - "*.*.*"
 
