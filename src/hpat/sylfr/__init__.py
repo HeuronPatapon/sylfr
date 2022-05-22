@@ -4,7 +4,7 @@ Syllabification de mots en français.
 
 __author__ = "Heuron Patapon"
 __email__ = "heuron-patapon@laposte.net"
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 
 import re
 import unittest
@@ -213,7 +213,7 @@ def syllabify(word: str) -> Syllabification:
     >>> syllabify(XSAMPA.to_ipa("sHivR@"))
     (('sɥ', 'i', ''), ('vʁ', 'ə', ''))
 
-    # TODO: psy, psaume
+    # TODO: psy, psaume, see issue #2
 
     ~~~
     """

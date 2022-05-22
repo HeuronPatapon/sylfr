@@ -13,9 +13,13 @@ ipa = XSAMPA.to_ipa  # alias
 xsampa = XSAMPA.from_ipa  # alias
 
 
-def iter_stdin() -> Iterator[str]:
-    for line in sys.stdin:
-        yield line.rstrip()
+def iter_stdin():
+    if sys.stdin.isatty():
+        while True:
+            line = input(f"[{__package__}]: ")
+            yield line.rstrip()
+    else:
+        yield from sys.stdin
 
 
 def consume(iterator, n=None):
@@ -60,18 +64,20 @@ def callback(*, source_format, target_format):
 
 
 def ArgumentParser():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="Effectue la syllabification d'un texte rédigé en français avec l'alphabet phonétique international international phonetic alphabet, IPA). ")
     parser.add_argument(
         "--from",
         dest="source_format",
         choices=("xsampa", "ipa"),
         default="ipa",
+        help="Format d'entrée.  'ipa' par défaut. ",
     )
     parser.add_argument(
         "--to",
         dest="target_format",
         choices=("xsampa", "ipa"),
         default="ipa",
+        help="Format de sortie.  'ipa' par défaut. "
     )
     parser.set_defaults(__callback__=callback)
     return parser
