@@ -1,6 +1,17 @@
+[tool.poetry]
+name = "sylfr-heuronpatapon"
+version = "1.1.1"
+description = "Syllabification de mots en français"
+authors = ["Heuron <heuron-patapon@laposte.net>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "hpat/sylfr", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+xsampa-heuronpatapon = {url = "https://github.com/HeuronPatapon/xsampa/releases/download/1.1.2/xsampa_HeuronPatapon-1.1.2-py3-none-any.whl"}
+
+
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

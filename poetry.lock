@@ -1,0 +1,38 @@
+[[package]]
+name = "ezre-heuronpatapon"
+version = "1.3.1"
+description = "Wrapper around the `re` module for easier management of regular expressions"
+category = "main"
+optional = false
+python-versions = ">=3.10,<4.0"
+
+[package.source]
+type = "url"
+url = "https://github.com/HeuronPatapon/ezre/releases/download/1.3.1/ezre_HeuronPatapon-1.3.1-py3-none-any.whl"
+
+[[package]]
+name = "xsampa-heuronpatapon"
+version = "1.1.2"
+description = "Convert between XSAMPA and IPA data formats."
+category = "main"
+optional = false
+python-versions = ">=3.10,<4.0"
+
+[package.dependencies]
+ezre_HeuronPatapon = {url = "https://github.com/HeuronPatapon/ezre/releases/download/1.3.1/ezre_HeuronPatapon-1.3.1-py3-none-any.whl"}
+
+[package.extras]
+pandoc = ["panflute (>=2.2.3,<3.0.0)"]
+
+[package.source]
+type = "url"
+url = "https://github.com/HeuronPatapon/xsampa/releases/download/1.1.2/xsampa_HeuronPatapon-1.1.2-py3-none-any.whl"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "a047ac26053489a086a2be83d3390d39ca1365a16835ae7d51343e16d02f28b0"
+
+[metadata.files]
+ezre-heuronpatapon = []
+xsampa-heuronpatapon = []

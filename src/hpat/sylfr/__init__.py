@@ -4,7 +4,7 @@ Syllabification de mots en français.
 
 __author__ = "Heuron Patapon"
 __email__ = "heuron-patapon@laposte.net"
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 import re
 import unittest
